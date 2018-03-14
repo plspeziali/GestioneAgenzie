@@ -5,10 +5,8 @@ $(document).ready(function() {
 function popAg(){
     $('#agentCl').empty();
     $.post("popAg.php", function(data, status){
-        window.alert(data);
         var array = data.split(";");
         for(i=0; i<array.length-1; i+=2){
-            window.alert(array[i+1]);
             $('#agentCl').append($('<option>', {
                 value: array[i],
                 text: array[i+1]
