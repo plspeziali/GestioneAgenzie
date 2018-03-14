@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Gestione Agenti</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
+        <script src="controller.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Gestione Agenti</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#addAg">Aggiungi Agente</button>
+                <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#addCl">Aggiungi Cliente</button>
+            </ul>
+          </div>
+        </nav>
+        
+        <div id="divAlert"></div>
+
+        <!-- Modale Agente -->
+        <div id="addAg" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+              
+            <div class="modal-content">
+                
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Aggiungi Agente</h4>
+              </div>
+                
+              <div class="modal-body">
+                    <label>Nome dell'Agente:</label>
+                    <input type="text" id="nameAg">
+              </div>
+                
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" onClick="sendAg()" data-dismiss="modal">Invia</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Annulla</button>
+              </div>
+                
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Modale Cliente -->
+        <div id="addCl" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+              
+            <div class="modal-content">
+                
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Aggiungi Cliente</h4>
+              </div>
+                
+              <div class="modal-body">
+                  <label>Ragione Sociale del Cliente:</label><br>
+                  <input type="text" id="nameCl"><hr>
+                  <label>Regione del Cliente:</label><br>
+                  <input type="text" id="nameCl"><hr>
+                  <label>Agente Corrispondente:</label><br>
+                  <select class="selectpicker" id="agentCl"></select>
+              </div>
+                
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" onClick="sendCl()" data-dismiss="modal">Invia</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Annulla</button>
+              </div>
+                
+            </div>
+
+          </div>
+        </div>
+    </body>
+</html>
