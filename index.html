@@ -1,13 +1,9 @@
 <html>
     <head>
         <title>Gestione Agenti</title>
-        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-*.min.js"></script>
         <script src="controller.js"></script>
     </head>
     <body>
@@ -23,7 +19,37 @@
           </div>
         </nav>
         
-        <div id="divAlert"></div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10" id="divAlert"></div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Nome Agente</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tabAg"></tbody>
+                  </table>
+            </div>
+            <div class="col-sm-6">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Ragione Sociale Cliente</th>
+                        <th>Regione Cliente</th>
+                        <th>Agente Corrispondente</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tabCl"></tbody>
+                  </table>
+            </div>
+        </div>
+        
+        
 
         <!-- Modale Agente -->
         <div id="addAg" class="modal fade" role="dialog">
